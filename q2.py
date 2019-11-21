@@ -7,12 +7,13 @@ for run in range(50):
     flagneg = 0
     flagpos = 0
     cross = 0
-    time = 4 * 10000
-    # count = 0
+
+    # change t here:
+    time = 16 * 10000
+
     for t in range(time):
         decide = random.random()
         if decide >= 0.5:
-            # count += 1
             if flagneg == 1:
                 flagneg = 0
             if flagpos == 1:
@@ -28,8 +29,5 @@ for run in range(50):
             s = s - 1
             if s == 0:
               flagneg = 1
-
-    # print("cross time:", cross)
     avecross[run] = cross
-    # print(count)
 print("avecross:", (sum(avecross) / 50) )
